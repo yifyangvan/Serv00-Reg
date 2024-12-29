@@ -74,7 +74,7 @@ def background_task(input_email: str):
                     else:
                         logger.warning("\033[4m验证码识别失败,正在重试...\033[0m")
                         retry += 1
-                        if retry > 20: # 此处修改重试次数，默认20次.
+                        if retry > 2000: # 此处修改重试次数，默认20次.
                             print("验证码识别失败次数过多,退出重试.")
                             return
                         continue
